@@ -1,6 +1,20 @@
 # Uniswap V3 - Subgraph
 
-## Run
+## Dev
 ```shell
-ts-node src/index.ts
+npm run dev
 ```
+
+## Build
+```shell
+npm run build
+```
+
+## Start
+```shell
+npm run start
+```
+
+## Useful links
+
+[Uniswap Subgraph Documentation](https://docs.uniswap.org/api/subgraph/overview#versions-and-production-endpoints)
