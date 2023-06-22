@@ -20,3 +20,21 @@ axios.post(URL, {
 }).then((result) => {
     console.log(result.data.data)
 })
+
+const API_KEY = "MY KEY";
+const SUBGRAPH_URL = `https://gateway.thegraph.com/api/${API_KEY}/subgraphs/id/ELUcwgpm14LKPLrBRuVvPvNKHQ9HvwmtKgKSH6123cr7`;
+const SUBGRAPH_QUERY = `{
+    tokens(first: 5, orderBy:lastPriceUSD, orderDirection:desc) {
+      id
+      name
+      symbol
+      lastPriceUSD
+      decimals
+    }
+  }`;
+
+axios.post(SUBGRAPH_URL, {
+    query: SUBGRAPH_QUERY
+}).then((result) => {
+    console.log(result.data.data)
+})
